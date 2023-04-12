@@ -1,0 +1,8 @@
+utils/Mensagens.class
+models/Cliente_.class
+models/Tipo.class
+models/Produto.class
+models/Produto_.class
+services/Dao.class
+models/Cliente.class
+manager/ManagerProduto.class
