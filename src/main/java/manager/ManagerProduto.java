@@ -2,8 +2,6 @@ package manager;
 
 import java.io.Serializable;
 import javax.annotation.PostConstruct;
-import javax.faces.application.FacesMessage;
-import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 import models.Produto;
@@ -18,6 +16,7 @@ import models.Produto;
 public class ManagerProduto implements Serializable {
     
     private Produto produto;
+    
     
     @PostConstruct
     public void instanciar() {

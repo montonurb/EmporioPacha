@@ -1,6 +1,12 @@
 /Users/brunomonteiro/Development/EmporioPacha/src/main/java/models/Cliente.java
-/Users/brunomonteiro/Development/EmporioPacha/src/main/java/services/Dao.java
 /Users/brunomonteiro/Development/EmporioPacha/src/main/java/utils/Mensagens.java
+/Users/brunomonteiro/Development/EmporioPacha/src/main/java/manager/ManagerVenda.java
+/Users/brunomonteiro/Development/EmporioPacha/src/main/java/manager/ManagerEstoque.java
 /Users/brunomonteiro/Development/EmporioPacha/src/main/java/models/Produto.java
+/Users/brunomonteiro/Development/EmporioPacha/src/main/java/services/ProdutoServico.java
+/Users/brunomonteiro/Development/EmporioPacha/src/main/java/services/GenericoServico.java
+/Users/brunomonteiro/Development/EmporioPacha/src/main/java/manager/ManagerCliente.java
 /Users/brunomonteiro/Development/EmporioPacha/src/main/java/manager/ManagerProduto.java
 /Users/brunomonteiro/Development/EmporioPacha/src/main/java/models/Tipo.java
+/Users/brunomonteiro/Development/EmporioPacha/src/main/java/services/ClienteServico.java
+/Users/brunomonteiro/Development/EmporioPacha/src/main/java/models/Venda.java

@@ -1,10 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui" >
+    <h:head>
+        <link rel="StyleSheet" type="text/css" href="CSS/botoes.css" />
         <title>Empório Pacha</title>
-    </head>
-    <body>
-        <div>Clientes</div>
-    </body>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div class="container">
+                <div class="botaoSuperior">
+                    <p:commandButton value="Cadastrar" icon="pi pi-plus" action="#{managerCliente.redirecionarCadastroCliente()}" />
+                </div>
+                <br/>
+                <div class="pesquisar">
+                    <p:outputLabel value="Nome: " />
+                    <p:inputText value="#{managerCliente.cliente.nome}" />
+                    
+                    <p:outputLabel value="WhatsApp: " />
+                    <p:inputText value="#{managerCliente.cliente.whatsapp}" />
+                    
+                    <p:commandButton value="Pesquisar" icon="pi pi-search" action="#{managerCliente.buscarEspecifico()}" update="@form" />
+                    <p:commandButton value="Limpar" icon="pi pi-trash" action="#{managerCliente.limpar()}" update="@form" />
+                </div>
+                <br/>
+                <div class="dataTable">
+                    <p:fieldset legend="Clientes" >
+                        <div class="card">
+                            <h:form id="form">
+                                <p:dataTable var="cliente" value="#{managerCliente.clientes}"
+                                             paginator="true" rows="5" lazy="false" >
+                                    
+                                    <p:column headerText="Ações">
+                                        <p:commandButton icon="pi pi-trash" action="#{managerCliente.excluir(cliente)}" update="@form" />
+                                    </p:column>
+                                    
+                                    <p:column headerText="Nome">
+                                        <p:outputLabel value="#{cliente.nome}" />
+                                    </p:column>
+                                    
+                                    <p:column headerText="WhatsApp">
+                                        <p:outputLabel value="#{cliente.whatsapp}" />
+                                    </p:column>
+                                    
+                                    <p:column headerText="Endereço">
+                                        <p:outputLabel value="#{cliente.endereco}" />
+                                    </p:column>
+                                </p:dataTable>
+                            </h:form>
+                        </div>
+                    </p:fieldset>
+                </div>
+            </div>
+        </h:form>
+    </h:body>
 </html>
