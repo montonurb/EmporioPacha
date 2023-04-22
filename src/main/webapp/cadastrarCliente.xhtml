@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Empório Pacha</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div class="container">
+                <p:growl  />
+                <div>
+                    <p:fieldset legend="Cadastrar Cliente" >
+                        <div class="card" >
+                            <h:panelGrid columns="2" >
+                                <p:outputLabel value="Nome:" id="nome" />
+                                <p:inputText  value="#{managerCliente.cliente.nome}" />
+                                <p:outputLabel value="Sobrenome:" id="sobrenome" />
+                                <p:inputText value="#{managerCliente.cliente.sobrenome}" />
+                                <p:outputLabel value="WhatsApp:" id="telefone" />
+                                <p:inputMask mask="(99) 9 9999-9999" value="#{managerCliente.cliente.whatsapp}" />
+                                <h:outputLabel value="Endereço:" id="endereco" />
+                                <p:inputText value="#{managerCliente.cliente.endereco}" />
+                            </h:panelGrid>
+                            <p:commandButton value="Cadastrar" action="#{managerCliente.salvar()}" update="@form" />
+                        </div>
+                    </p:fieldset>
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>
